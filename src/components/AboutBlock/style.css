@@ -1,0 +1,122 @@
+.about-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.about-block-container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 100px 20px;
+}
+
+.about-block-hero {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	align-items: flex-start;
+}
+
+.about-block-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 40px;
+}
+
+.about-block-intro {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.about-block-image {
+	max-width: 400px;
+	width: 36vw;
+	aspect-ratio: 4 / 3;
+	object-fit: contain;
+}
+
+.about-block-cards {
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+}
+
+.about-block-card {
+	display: flex;
+	gap: 20px;
+}
+
+.about-block-card-icon {
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.about-block-card-icon--rocket {
+	width: 35px;
+	height: 35px;
+}
+
+.about-block-card-icon--message {
+	width: 40px;
+	height: 40px;
+}
+
+.about-block-icon {
+	stroke: #FFBF00;
+	flex-shrink: 0;
+}
+
+.about-block-card-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.about-block-card-desc {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.about-block-cta-wrap {
+	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.about-block-cta {
+	width: 237px;
+	height: 47px;
+	background-color: #FFBF00;
+	border: none;
+	cursor: pointer;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	transition: color 0.3s ease;
+}
+
+.about-block-cta:hover {
+	color: #000000;
+}
+
+@media (max-width: 768px) {
+	.about-block-hero {
+		flex-direction: column;
+	}
+
+	.about-block-image {
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.about-block-cards {
+		grid-template-columns: 1fr;
+	}
+}

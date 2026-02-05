@@ -1,7 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Montserrat_Alternates } from 'next/font/google'
 
 import Header from '@/layout/Header'
+
+const montserratAlternates = Montserrat_Alternates({
+	subsets: ['latin', 'cyrillic'],
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+	variable: '--font-montserrat-alternates',
+	display: 'swap',
+})
 
 export const metadata: Metadata = {
 	title: 'Fabrica L - Фотостудия',
@@ -41,11 +49,11 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='ru'>
+		<html lang='ru' className={montserratAlternates.variable}>
 			<head>
 				<link rel='icon' href='/favicon.ico' />
 			</head>
-			<body>
+			<body className={montserratAlternates.className}>
 				<Header />
 				{children}
 			</body>
