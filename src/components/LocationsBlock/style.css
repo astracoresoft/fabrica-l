@@ -1,0 +1,144 @@
+.locations-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.locations-block-container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 100px 20px;
+}
+
+.locations-block-title {
+	width: 100%;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 25px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.locations-block-list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 100px;
+	margin-top: 100px;
+}
+
+.locations-hall {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.locations-hall-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.locations-hall-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+}
+
+.locations-hall-gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 5px;
+}
+
+.locations-hall-gallery-btn {
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	display: block;
+	line-height: 0;
+}
+
+.locations-hall-gallery-btn img {
+	width: 100%;
+	display: block;
+}
+
+.locations-hall-info {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.locations-hall-info ul {
+	padding-left: 14px;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 2;
+}
+
+.locations-hall-booking {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	font-style: italic;
+}
+
+.locations-hall-booking a {
+	color: inherit;
+}
+
+.locations-hall-divider {
+	width: 100%;
+	height: 1px;
+	background-color: #000000;
+}
+
+.locations-gallery {
+	margin-top: 60px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 5px;
+}
+
+.locations-gallery-btn {
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	display: block;
+	line-height: 0;
+}
+
+.locations-gallery-btn img {
+	width: 100%;
+	display: block;
+}
+
+@media (max-width: 1040px) {
+	.locations-hall-content {
+		grid-template-columns: 1fr;
+	}
+
+	.locations-gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.locations-hall-gallery {
+		grid-template-columns: 1fr;
+	}
+
+	.locations-gallery {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,4 +1,9 @@
-import { VideoBlock, AboutBlock, MetricBlock } from '@/components'
+import {
+	VideoBlock,
+	AboutBlock,
+	MetricBlock,
+	LocationsBlock,
+} from '@/components'
 
 export default function Home() {
 	return (
@@ -6,6 +11,7 @@ export default function Home() {
 			<VideoBlock />
 			<AboutBlock />
 			<MetricBlock />
+			<LocationsBlock />
 		</>
 	)
 }
