@@ -3,6 +3,7 @@ import {
 	AboutBlock,
 	MetricBlock,
 	LocationsBlock,
+	GetStartedBlock,
 } from '@/components'
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
 			<AboutBlock />
 			<MetricBlock />
 			<LocationsBlock />
+			<GetStartedBlock />
 		</>
 	)
 }

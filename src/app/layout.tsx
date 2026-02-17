@@ -1,8 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Montserrat_Alternates } from 'next/font/google'
+import { Comfortaa, Montserrat_Alternates } from 'next/font/google'
 
 import Header from '@/layout/Header'
+
+const comfortaa = Comfortaa({
+	subsets: ['latin', 'cyrillic'],
+	weight: ['300', '400', '500', '600', '700'],
+	variable: '--font-comfortaa',
+	display: 'swap',
+})
 
 const montserratAlternates = Montserrat_Alternates({
 	subsets: ['latin', 'cyrillic'],
@@ -49,7 +56,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='ru' className={montserratAlternates.variable}>
+		<html lang='ru' className={`${montserratAlternates.variable} ${comfortaa.variable}`}>
 			<head>
 				<link rel='icon' href='/favicon.ico' />
 			</head>
