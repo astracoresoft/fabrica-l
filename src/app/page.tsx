@@ -4,6 +4,7 @@ import {
 	MetricBlock,
 	LocationsBlock,
 	GetStartedBlock,
+	TeamBlock,
 } from '@/components'
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
 			<MetricBlock />
 			<LocationsBlock />
 			<GetStartedBlock />
+			<TeamBlock />
 		</>
 	)
 }

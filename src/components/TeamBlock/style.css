@@ -1,0 +1,123 @@
+.team-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.team-block-container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 100px 20px;
+}
+
+.team-block-title-wrap {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.team-block-title-wrap::before,
+.team-block-title-wrap::after {
+	content: '';
+	width: 100px;
+	height: 2px;
+	background-color: currentColor;
+	flex-shrink: 0;
+}
+
+.team-block-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.team-block-cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+	margin-top: 80px;
+}
+
+.team-block-card {
+	position: relative;
+	overflow: hidden;
+}
+
+.team-block-card-image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+}
+
+.team-block-card-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	background-color: transparent;
+	transition: background-color 0.35s ease;
+}
+
+.team-block-card:hover .team-block-card-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.team-block-card-title,
+.team-block-card-desc {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.team-block-card:hover .team-block-card-title,
+.team-block-card:hover .team-block-card-desc {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.team-block-card-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+	color: #FFFFFF;
+	margin: 0 0 8px 0;
+}
+
+.team-block-card-desc {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	color: #FFBF00;
+	line-height: 1.4;
+}
+
+@media (max-width: 1040px) {
+	.team-block-cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 767px) {
+	.team-block-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.team-block-title-wrap::before,
+	.team-block-title-wrap::after {
+		display: none;
+	}
+
+	.team-block-title-wrap {
+		gap: 10px;
+	}
+}
