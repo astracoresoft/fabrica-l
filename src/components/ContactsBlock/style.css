@@ -1,0 +1,116 @@
+.contacts-block {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #4C4C4C;
+}
+
+.contacts-block-container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 100px 20px;
+}
+
+.contacts-block-title-wrap {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.contacts-block-title-wrap::before,
+.contacts-block-title-wrap::after {
+	content: '';
+	width: 100px;
+	height: 2px;
+	background-color: #FFFFFF;
+	flex-shrink: 0;
+}
+
+.contacts-block-title {
+	margin: 0;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.contacts-block-cards {
+	margin-top: 40px;
+	display: flex;
+	gap: 40px;
+	justify-content: space-between;
+}
+
+.contacts-block-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: inherit;
+	transition: opacity 0.2s ease;
+}
+
+.contacts-block-card:hover {
+	opacity: 1;
+}
+
+.contacts-block-card-icon-wrap {
+	width: 100px;
+	height: 100px;
+	background-color: #5E5E5E;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.25s ease;
+}
+
+.contacts-block-card:hover .contacts-block-card-icon-wrap {
+	background-color: #FFBF00;
+}
+
+.contacts-block-card-icon {
+	width: 50px;
+	height: 50px;
+	color: #FFFFFF;
+}
+
+.contacts-block-card--facebook .contacts-block-card-icon {
+	transform: translateX(-1px);
+}
+
+.contacts-block-card-title {
+	margin-top: 16px;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: #FFBF00;
+	white-space: nowrap;
+}
+
+.contacts-block-card-subtitle {
+	margin-top: 8px;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	color: #FFFFFF;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+	.contacts-block-cards {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contacts-block-title-wrap::before,
+	.contacts-block-title-wrap::after {
+		display: none;
+	}
+}
