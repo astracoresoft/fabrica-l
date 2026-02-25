@@ -6,6 +6,7 @@ import {
 	GetStartedBlock,
 	TeamBlock,
 	ContactsBlock,
+	SliderBlock,
 } from '@/components'
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 			<GetStartedBlock />
 			<TeamBlock />
 			<ContactsBlock />
+			<SliderBlock />
 		</>
 	)
 }
