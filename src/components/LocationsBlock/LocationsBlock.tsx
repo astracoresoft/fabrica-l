@@ -108,7 +108,7 @@ const LocationsBlock = () => {
 	}, [])
 
 	return (
-		<div className='locations-block'>
+		<div id='photos' className='locations-block'>
 			<div className='locations-block-container'>
 				<h1 className='locations-block-title'>
 					Простори для проведення івентів та заходів

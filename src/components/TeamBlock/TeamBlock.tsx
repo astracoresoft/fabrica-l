@@ -63,7 +63,7 @@ const TEAM_CARDS: TeamCard[] = [
 ]
 
 const TeamBlock = () => (
-	<div className='team-block'>
+	<div id='team' className='team-block'>
 		<div className='team-block-container'>
 			<div className='team-block-title-wrap'>
 				<h1 className='team-block-title'>НАША КОМАНДА</h1>

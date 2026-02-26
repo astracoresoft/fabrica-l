@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Comfortaa, Montserrat_Alternates } from 'next/font/google'
 
 import Header from '@/layout/Header'
+import HashScroll from '@/layout/HashScroll'
 
 const comfortaa = Comfortaa({
 	subsets: ['latin', 'cyrillic'],
@@ -62,6 +63,7 @@ export default function RootLayout({
 			</head>
 			<body className={montserratAlternates.className}>
 				<Header />
+				<HashScroll />
 				{children}
 			</body>
 		</html>

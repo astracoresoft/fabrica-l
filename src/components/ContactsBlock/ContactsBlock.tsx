@@ -44,7 +44,7 @@ const ContactIcon = ({ type }: { type: ContactCard['icon'] }) => {
 }
 
 const ContactsBlock = () => (
-	<div className='contacts-block'>
+	<div id='contacts' className='contacts-block'>
 		<div className='contacts-block-container'>
 			<div className='contacts-block-title-wrap'>
 				<h1 className='contacts-block-title'>контактуйте з нами</h1>

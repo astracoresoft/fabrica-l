@@ -1,0 +1,102 @@
+.rents-page {
+	width: 100%;
+	padding-top: 60px;
+	display: flex;
+	justify-content: center;
+}
+
+.rents-page-container {
+	max-width: 1180px;
+	width: 100%;
+	padding: 100px 20px;
+}
+
+.rents-page-title-wrap {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.rents-page-title-wrap::before,
+.rents-page-title-wrap::after {
+	content: '';
+	width: 100px;
+	height: 2px;
+	background-color: currentColor;
+	flex-shrink: 0;
+}
+
+.rents-page-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.level-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	margin-top: 60px;
+}
+
+.level-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 60px;
+}
+
+.level-title {
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	margin: 0;
+}
+
+.level-cta {
+	width: 217px;
+	height: 47px;
+	background-color: #FFBF00;
+	border: none;
+	cursor: pointer;
+	font-family: 'Montserrat Alternates', sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	transition: color 0.3s ease;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	text-decoration: none;
+}
+
+.level-cta:hover {
+	color: #000000;
+}
+
+.level-image {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+
+.level-divider {
+	width: 100%;
+	height: 1px;
+	margin-top: -20px;
+	background-color: #000000;
+}
+
+@media (max-width: 767px) {
+	.rents-page-title-wrap::before,
+	.rents-page-title-wrap::after {
+		display: none;
+	}
+}

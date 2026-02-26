@@ -2,7 +2,7 @@ import './style.css'
 
 const AboutBlock = () => {
 	return (
-		<div className='about-block'>
+		<div id='about' className='about-block'>
 			<div className='about-block-container'>
 				<div className='about-block-hero'>
 					<div>
