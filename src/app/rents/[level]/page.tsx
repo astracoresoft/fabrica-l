@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+import { SITE_URL } from '@/config/site'
 import '../style.css'
 
 const LEVELS = [1, 2, 3, 4, 5] as const
@@ -12,9 +13,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { level } = await params
 	const n = Number(level)
 	if (!LEVELS.includes(n as (typeof LEVELS)[number])) return {}
+	const url = `${SITE_URL}/rents/${n}`
 	return {
-		title: `${n} рівень | Аренда | Fabrica L`,
-		description: `Резидентство ${n} рівень — Fabrica L.`,
+		title: `${n} рівень — Резидентство`,
+		description: `Резидентство ${n} рівень Fabrica L. Умови оренди та резидентства. Дніпро.`,
+		openGraph: {
+			url,
+			title: `${n} рівень резидентства | Fabrica L`,
+			description: `Резидентство ${n} рівень — Fabrica L, Дніпро.`,
+		},
+		alternates: {
+			canonical: url,
+		},
 	}
 }
 

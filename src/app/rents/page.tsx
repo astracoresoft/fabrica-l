@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronsRight } from 'lucide-react'
 
+import { SITE_URL } from '@/config/site'
 import './style.css'
 
 const LEVELS = [
@@ -13,9 +14,18 @@ const LEVELS = [
 ] as const
 
 export const metadata: Metadata = {
-	title: 'Аренда | Fabrica L - Фотостудия',
+	title: 'Оренда — Резидентство',
 	description:
-		'Аренда фотостудии Fabrica L. Профессиональное оборудование и пространство для съёмок.',
+		'Оренда простору Fabrica L. Резидентство 1–5 рівнів. Професійне обладнання та простір для зйомок у Дніпрі.',
+	keywords: ['оренда фотостудії', 'резидентство', 'Fabrica L', 'оренда простору Дніпро'],
+	openGraph: {
+		url: `${SITE_URL}/rents`,
+		title: 'Оренда та резидентство | Fabrica L',
+		description: 'Оренда простору Fabrica L. Резидентство 1–5 рівнів. Дніпро.',
+	},
+	alternates: {
+		canonical: `${SITE_URL}/rents`,
+	},
 }
 
 export default function RentsPage() {
