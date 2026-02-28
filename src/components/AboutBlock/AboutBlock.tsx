@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import './style.css'
 
 const AboutBlock = () => {
@@ -51,9 +52,9 @@ const AboutBlock = () => {
 					</div>
 				</div>
 				<div className='about-block-cta-wrap'>
-					<button type='button' className='about-block-cta'>
+					<Link href='/rents' className='about-block-cta'>
 						оренда приміщення
-					</button>
+					</Link>
 				</div>
 			</div>
 		</div>

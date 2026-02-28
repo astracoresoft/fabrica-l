@@ -30,9 +30,9 @@
 }
 
 .slider-slide {
-	flex: 0 0 210px;
-	width: 210px;
-	min-width: 210px;
+	flex: 0 0 200px;
+	width: 200px;
+	min-width: 200px;
 }
 
 .slider-slide img {

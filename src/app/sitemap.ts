@@ -1,8 +1,10 @@
 import type { MetadataRoute } from 'next'
+import { getLevels } from '@/data/levels'
 import { SITE_URL } from '@/config/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const now = new Date().toISOString()
+	const levels = getLevels()
 
 	return [
 		{
@@ -17,11 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			changeFrequency: 'weekly',
 			priority: 0.9,
 		},
-		...( [1, 2, 3, 4, 5].map((level) => ({
-			url: `${SITE_URL}/rents/${level}`,
+		...levels.map((level) => ({
+			url: `${SITE_URL}/rents/${level.slug}`,
 			lastModified: now,
 			changeFrequency: 'monthly' as const,
 			priority: 0.8,
-		})) ),
+		})),
 	]
 }

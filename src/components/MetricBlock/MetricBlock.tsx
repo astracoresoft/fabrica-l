@@ -1,20 +1,12 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+
+import { getMetrics } from '@/data/metrics'
 import './style.css'
 
-const METRICS = [
-	{ number: 100, text: 'фотоіндустрія', image: '/metric1.webp' },
-	{ number: 630, text: 'it-компанії', image: '/metric2.webp' },
-	{ number: 700, text: 'Міжнародна логістика', image: '/metric3.webp' },
-	{ number: 700, text: 'Регіональні ЗМI', image: '/metric4.webp' },
-	{ number: 250, text: "Кав'ярня та коворкінг", image: '/metric5.webp' },
-	{ number: 1600, text: 'Івент-хол', image: '/metric6.webp' },
-	{ number: 570, text: 'Креативні майстерні', image: '/metric7.webp' },
-	{ number: 1750, text: 'Виставкові простори', image: '/metric8.webp' },
-] as const
-
 const MetricBlock = () => {
+	const METRICS = getMetrics()
 	const [displayedNumbers, setDisplayedNumbers] = useState<number[]>(
 		METRICS.map(() => 0)
 	)

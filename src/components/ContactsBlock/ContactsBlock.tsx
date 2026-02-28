@@ -1,34 +1,9 @@
 import { Instagram, Facebook } from 'lucide-react'
 import { FaTelegram } from 'react-icons/fa'
+
+import type { ContactCard } from '@/data/contacts'
+import { getContactCards } from '@/data/contacts'
 import './style.css'
-
-type ContactCard = {
-	title: string
-	subtitle: string
-	href: string
-	icon: 'instagram' | 'facebook' | 'telegram'
-}
-
-const CONTACT_CARDS: ContactCard[] = [
-	{
-		title: 'Instagram',
-		subtitle: 'дивіться наші фото',
-		href: 'https://www.instagram.com/fabrica.l.dp/',
-		icon: 'instagram',
-	},
-	{
-		title: 'Facebook',
-		subtitle: 'додавайте в друзі',
-		href: 'https://www.facebook.com/DniproFabricaL',
-		icon: 'facebook',
-	},
-	{
-		title: 'Telegram',
-		subtitle: 'отримуйте більше',
-		href: 'https://t.me/FabricaL_bot',
-		icon: 'telegram',
-	},
-]
 
 const ContactIcon = ({ type }: { type: ContactCard['icon'] }) => {
 	const className = 'contacts-block-card-icon'
@@ -50,7 +25,7 @@ const ContactsBlock = () => (
 				<h1 className='contacts-block-title'>контактуйте з нами</h1>
 			</div>
 			<div className='contacts-block-cards'>
-				{CONTACT_CARDS.map((card, index) => (
+				{getContactCards().map((card, index) => (
 					<a
 						key={index}
 						href={card.href}

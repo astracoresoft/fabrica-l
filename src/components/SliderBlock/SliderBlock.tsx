@@ -1,16 +1,17 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+
+import { getSlides } from '@/data/slides'
 import './style.css'
 
-const SLIDE_WIDTH = 210
+const SLIDE_WIDTH = 200
 const MIN_GAP = 30
 const AUTO_PLAY_MS = 3000
-
-const SLIDES = ['/slide1.webp', '/slide2.webp', '/slide3.webp', '/slide4.webp']
+const REPEAT = 10
 
 // Дублируем слайды для бесшовного бесконечного скролла
-const REPEAT = 10
+const SLIDES = getSlides()
 const SLIDES_EXTENDED = Array.from({ length: REPEAT }, () => [...SLIDES]).flat()
 
 // Пороги: при ширине строго больше — показываем больше слайдов; на границе — меньше (1 слайд по центру)

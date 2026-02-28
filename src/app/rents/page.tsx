@@ -2,16 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronsRight } from 'lucide-react'
 
+import { getLevels } from '@/data/levels'
 import { SITE_URL } from '@/config/site'
 import './style.css'
 
-const LEVELS = [
-	{ level: 1, image: '/lvl1.webp' },
-	{ level: 2, image: '/lvl2.webp' },
-	{ level: 3, image: '/lvl3.webp' },
-	{ level: 4, image: '/lvl4.webp' },
-	{ level: 5, image: '/lvl5.webp' },
-] as const
+const LEVELS = getLevels()
 
 export const metadata: Metadata = {
 	title: 'Оренда — Резидентство',
@@ -36,14 +31,14 @@ export default function RentsPage() {
 					<h1 className='rents-page-title'>Оренда</h1>
 				</div>
 				<div className='level-cards'>
-					{LEVELS.map(({ level, image }) => (
-						<div key={level} className='level-card'>
-							<h2 className='level-title'>{level} рівень</h2>
-							<Link href={`/rents/${level}`} className='level-cta'>
+					{LEVELS.map((level) => (
+						<div key={level.id} className='level-card'>
+							<h2 className='level-title'>{level.label}</h2>
+							<Link href={`/rents/${level.slug}`} className='level-cta'>
 								<ChevronsRight size={18} strokeWidth={2} aria-hidden />
-								переглянути {level} рівень
+								переглянути {level.label}
 							</Link>
-							<img src={image} alt={`${level} рівень`} className='level-image' />
+							<img src={level.image} alt={level.label} className='level-image' />
 							<div className='level-divider' />
 						</div>
 					))}

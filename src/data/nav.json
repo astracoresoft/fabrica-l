@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "href": "#about", "label": "про проект" },
+    { "href": "#photos", "label": "фото" },
+    { "href": "/rents", "label": "резидентство", "withChildren": true },
+    { "href": "#team", "label": "команда" },
+    { "href": "#contacts", "label": "контакти" }
+  ]
+}

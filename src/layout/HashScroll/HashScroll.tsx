@@ -3,15 +3,23 @@
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 
-const SCROLL_DELAY_AFTER_NAVIGATION_MS = 150
+/** Задержка прокрутки к якорю после перехода на главную: после того как заставка показалась и скрылась (должно совпадать с длительностью заставки в PageSplash ~1500ms + небольшой буфер) */
+const SCROLL_AFTER_SPLASH_MS = 1600
 
-function scrollToHash(smooth = true) {
-	if (typeof window === 'undefined') return
+const SCROLL_RETRY_INTERVAL_MS = 100
+const SCROLL_RETRY_MAX = 15
+
+function scrollToHash(smooth = true): boolean {
+	if (typeof window === 'undefined') return false
 	const hash = window.location.hash
-	if (!hash) return
+	if (!hash) return false
 	const id = hash.slice(1)
 	const el = document.getElementById(id)
-	if (el) el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' })
+	if (el) {
+		el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto' })
+		return true
+	}
+	return false
 }
 
 export default function HashScroll() {
@@ -19,7 +27,7 @@ export default function HashScroll() {
 	const prevPathname = useRef<string | null>(null)
 	const cameFromOtherPage = useRef(false)
 
-	// Переход с другой страницы на главную с якорем: сначала показываем верх, потом плавно к блоку
+	// Переход с другой страницы на главную с якорем: ждём пока заставка покажется и уберётся, потом прокручиваем к блоку
 	useEffect(() => {
 		if (pathname !== '/') {
 			prevPathname.current = pathname
@@ -32,19 +40,31 @@ export default function HashScroll() {
 			return
 		}
 
-		cameFromOtherPage.current = prevPathname.current !== null && prevPathname.current !== '/'
+		cameFromOtherPage.current =
+			prevPathname.current !== null && prevPathname.current !== '/'
 		prevPathname.current = pathname
 
 		if (cameFromOtherPage.current) {
-			// Сначала скролл вверх, даём увидеть верх страницы
 			window.scrollTo({ top: 0, behavior: 'instant' })
-			const t = setTimeout(() => {
-				scrollToHash(true)
-			}, SCROLL_DELAY_AFTER_NAVIGATION_MS)
-			return () => clearTimeout(t)
+			// Прокрутку к якорю делаем после заставки (SCROLL_AFTER_SPLASH_MS), с повторными попытками если элемент ещё не в DOM
+			let retryCount = 0
+			let cancelled = false
+			const tryScroll = () => {
+				if (cancelled) return
+				if (scrollToHash(true)) return
+				retryCount += 1
+				if (retryCount < SCROLL_RETRY_MAX) {
+					setTimeout(tryScroll, SCROLL_RETRY_INTERVAL_MS)
+				}
+			}
+			const t = setTimeout(tryScroll, SCROLL_AFTER_SPLASH_MS)
+			return () => {
+				cancelled = true
+				clearTimeout(t)
+			}
 		}
 
-		// Уже на главной (обновление/редирект) — просто прокрутить после рендера
+		// Уже на главной — прокрутить после рендера
 		const id = requestAnimationFrame(() => {
 			requestAnimationFrame(() => scrollToHash(true))
 		})

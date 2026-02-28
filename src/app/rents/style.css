@@ -84,6 +84,7 @@
 .level-image {
 	width: 100%;
 	height: auto;
+	max-height: 850px;
 	object-fit: contain;
 }
 

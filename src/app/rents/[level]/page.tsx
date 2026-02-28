@@ -1,26 +1,29 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
+import { getLevelBySlug, getLevels } from '@/data/levels'
 import { SITE_URL } from '@/config/site'
-import '../style.css'
-
-const LEVELS = [1, 2, 3, 4, 5] as const
+import LevelSliderWithGallery from './LevelSliderWithGallery'
+import './style.css'
 
 type Props = { params: Promise<{ level: string }> }
 
+export async function generateStaticParams() {
+	return getLevels().map((l) => ({ level: l.slug }))
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { level } = await params
-	const n = Number(level)
-	if (!LEVELS.includes(n as (typeof LEVELS)[number])) return {}
-	const url = `${SITE_URL}/rents/${n}`
+	const levelData = getLevelBySlug(level)
+	if (!levelData) return {}
+	const url = `${SITE_URL}/rents/${levelData.slug}`
 	return {
-		title: `${n} рівень — Резидентство`,
-		description: `Резидентство ${n} рівень Fabrica L. Умови оренди та резидентства. Дніпро.`,
+		title: `${levelData.title} — Резидентство`,
+		description: `Резидентство ${levelData.title} Fabrica L. Умови оренди та резидентства. Дніпро.`,
 		openGraph: {
 			url,
-			title: `${n} рівень резидентства | Fabrica L`,
-			description: `Резидентство ${n} рівень — Fabrica L, Дніпро.`,
+			title: `${levelData.title} резидентства | Fabrica L`,
+			description: `Резидентство ${levelData.title} — Fabrica L, Дніпро.`,
 		},
 		alternates: {
 			canonical: url,
@@ -30,21 +33,37 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RentsLevelPage({ params }: Props) {
 	const { level } = await params
-	const n = Number(level)
-	if (!LEVELS.includes(n as (typeof LEVELS)[number])) notFound()
+	const levelData = getLevelBySlug(level)
+	if (!levelData) notFound()
 
 	return (
-		<div className='rents-page'>
-			<div className='rents-page-container' style={{ padding: '100px 20px' }}>
-				<h1 style={{ fontFamily: 'var(--font-comfortaa)', marginBottom: 24 }}>
-					{n} рівень
-				</h1>
-				<p style={{ marginBottom: 24 }}>
-					Сторінка {n} рівня. Контент можна додати пізніше.
-				</p>
-				<Link href='/rents' style={{ color: '#FFBF00', textDecoration: 'underline' }}>
-					← Назад до оренди
-				</Link>
+		<div className="level-page">
+			<div className="level-page-container" style={{ padding: '100px 20px' }}>
+				<div className="level-page-title-wrap">
+					<h1 className="level-page-title">{levelData.title}</h1>
+				</div>
+				{levelData.cards.map((card, cardIndex) => (
+					<div key={cardIndex} className="level-page-card">
+						<div className="level-page-content">
+							<LevelSliderWithGallery slides={card.slides} />
+							<div className="level-page-info">
+								<h2 className="level-page-info-title">{card.infoTitle}</h2>
+								<ul>
+									{card.listItems.map((item, i) => (
+										<li
+											key={i}
+											dangerouslySetInnerHTML={{ __html: item }}
+										/>
+									))}
+								</ul>
+								{card.cta && (
+									<span className="level-page-info-cta">{card.cta}</span>
+								)}
+							</div>
+						</div>
+						<div className="level-page-divider" />
+					</div>
+				))}
 			</div>
 		</div>
 	)

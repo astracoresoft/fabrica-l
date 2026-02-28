@@ -1,0 +1,22 @@
+{
+  "cards": [
+    {
+      "title": "Instagram",
+      "subtitle": "дивіться наші фото",
+      "href": "https://www.instagram.com/fabrica.l.dp/",
+      "icon": "instagram"
+    },
+    {
+      "title": "Facebook",
+      "subtitle": "додавайте в друзі",
+      "href": "https://www.facebook.com/DniproFabricaL",
+      "icon": "facebook"
+    },
+    {
+      "title": "Telegram",
+      "subtitle": "отримуйте більше",
+      "href": "https://t.me/FabricaL_bot",
+      "icon": "telegram"
+    }
+  ]
+}

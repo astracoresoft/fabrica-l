@@ -4,23 +4,9 @@ import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FiX } from 'react-icons/fi'
+
+import { NAV_ITEMS } from '@/data/nav'
 import './style.css'
-
-const RENTS_LEVELS = [
-	{ href: '/rents/1', label: '1 рівень' },
-	{ href: '/rents/2', label: '2 рівень' },
-	{ href: '/rents/3', label: '3 рівень' },
-	{ href: '/rents/4', label: '4 рівень' },
-	{ href: '/rents/5', label: '5 рівень' },
-] as const
-
-const NAV_ITEMS: { href: string; label: string; children?: readonly { href: string; label: string }[] }[] = [
-	{ href: '#about', label: 'про проект' },
-	{ href: '#photos', label: 'фото' },
-	{ href: '/rents', label: 'резидентство', children: RENTS_LEVELS },
-	{ href: '#team', label: 'команда' },
-	{ href: '#contacts', label: 'контакти' },
-]
 
 export default function Header() {
 	const pathname = usePathname()
