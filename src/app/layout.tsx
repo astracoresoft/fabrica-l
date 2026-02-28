@@ -6,6 +6,7 @@ import { SITE_NAME, SITE_URL, SITE_DEFAULT_DESCRIPTION } from '@/config/site'
 import Header from '@/layout/Header'
 import HashScroll from '@/layout/HashScroll'
 import PageSplash from '@/layout/PageSplash'
+import SideIcons from '@/layout/SideIcons'
 import JsonLd from '@/layout/JsonLd'
 
 const comfortaa = Comfortaa({
@@ -103,6 +104,7 @@ export default function RootLayout({
 				<PageSplash />
 				<Header />
 				<HashScroll />
+				<SideIcons />
 				<main id="main-content">{children}</main>
 			</body>
 		</html>
