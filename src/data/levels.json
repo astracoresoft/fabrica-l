@@ -1,190 +1,272 @@
 {
-	"levels": [
-		{
-			"id": 1,
-			"slug": "1",
-			"label": "1 рівень",
-			"title": "1 рівень",
-			"image": "/lvl1.webp",
-			"cards": [
-				{
-					"slides": [
-						"/lvl1.webp",
-						"/lvl1-2.webp",
-						"/lvl1-3.webp",
-						"/lvl1-4.webp"
-					],
-					"infoTitle": "Корпус F рівень 1",
-					"listItems": [
-						"Вільні простори корпусу L виходять на червону лінію",
-						"Панорамні вікна, суцільне скління",
-						"Висота стелі <strong>4.5м</strong>",
-						"Багато природного світла",
-						"Унікальний простір, що дозволяє втілити в життя будь-який формат креативної, творчої, виробничої та комерційної галузі",
-						"Поруч Арт-кафе Fabrica L для проведення зустрічей, переговорів та заходів, а також простір <strong>1500 кв.м.</strong> для проведення маштабних заходів",
-						"Розташування в зеленій частині міста (поблизу Ботанічний сад, парк Гагаріна)",
-						"Власна ТП потужністю <strong>1000 кВт</strong>",
-						"Територія охороняється цілодобово"
-					],
-					"cta": "Стати резидентом: 067 719 09 00"
-				}
-			]
-		},
-		{
-			"id": 2,
-			"slug": "2",
-			"label": "2 рівень",
-			"title": "2 рівень",
-			"image": "/lvl2.webp",
-			"cards": [
-				{
-					"slides": [
-						"/f21.webp",
-						"/f22.webp",
-						"/f23.webp",
-						"/f24.webp",
-						"/f25.webp",
-						"/f26.webp",
-						"/f27.webp"
-					],
-					"infoTitle": "Корпус F рівень 2",
-					"listItems": [
-						"Простір складається із двох кабінетів <strong>100 кв.м</strong> і <strong>30 кв.м</strong>",
-						"Авторський ремонт, опалення, кондиціонування",
-						"Висота стелі <strong>3.5м</strong>",
-						"Поруч арт-кафе для смачних перерв, проведення зустрічей, переговорів та заходів."
-					],
-					"cta": "Стати резидентом: 067 719 09 00"
-				},
-				{
-					"slides": [
-						"/l21.webp",
-						"/l22.webp",
-						"/l23.webp",
-						"/l24.webp",
-						"/l25.webp",
-						"/l26.webp",
-						"/l27.webp",
-						"/l28.webp",
-						"/l29.webp",
-						"/l210.webp",
-						"/l211.webp",
-						"/l212.webp",
-						"/l213.webp",
-						"/l214.webp",
-						"/l215.webp",
-						"/l216.webp",
-						"/l217.webp"
-					],
-					"infoTitle": "Корпус L рівень 2",
-					"listItems": [
-						"Простір загальною площею <strong>850 кв.м</strong>",
-						"Можливе розмежування навпіл",
-						"Планування open space",
-						"Відкрита тераса",
-						"2 санвузли",
-						"Поруч арт-кафе для смачних перерв,  проведення зустрічей, переговорів та заходів"
-					],
-					"cta": "Стати резидентом: 067 719 09 00"
-				}
-			]
-		},
-		{
-			"id": 3,
-			"slug": "3",
-			"label": "3 рівень",
-			"title": "3 рівень",
-			"image": "/lvl3.webp",
-			"cards": [
-				{
-					"slides": ["/f31.webp", "/f32.webp", "/f33.webp"],
-					"infoTitle": "Корпус F рівень 3",
-					"listItems": [
-						"Простір загальною площею <strong>110 кв.м</strong>",
-						"Висота стелі <strong>3.5 м</strong>",
-						"Для танцювальних та творчих студій, навчальних центрів та гуртків дитячого розвитку",
-						"Панорамні вікна із розкішним краєвидом, що сприяє релаксу та творчому настрою"
-					],
-					"cta": "Стати резидентом: 067 719 09 00"
-				}
-			]
-		},
-		{
-			"id": 4,
-			"slug": "4",
-			"label": "4 рівень",
-			"title": "4 рівень",
-			"image": "/lvl4.webp",
-			"cards": [
-				{
-					"slides": [
-						"/f41.webp",
-						"/f42.webp",
-						"/f43.webp",
-						"/f44.webp",
-						"/f45.webp",
-						"/f46.webp",
-						"/lvl4.webp",
-						"/f48.webp",
-						"/f49.webp",
-						"/f410.webp",
-						"/f411.webp",
-						"/f412.webp"
-					],
-					"infoTitle": "Корпус F рівень 4",
-					"listItems": [
-						"Простір загальною площею <strong>110 кв.м</strong>",
-						"<strong>Панорамні вікна</strong>, суцільне скління",
-						"Висота стелі <strong>4.5 м</strong>",
-						"Багато природного світла",
-						"Унікальний простір, що дозволяє втілити в життя будь-який формат креативної, творчої, виробничої та комерційної галузі",
-						"Поруч Арт-кафе Fabrica L для проведення зустрічей, переговорів та заходів, а також простір <strong>1500 кв.м.</strong> для проведення маштабних заходів",
-						"Розташування в зеленій частині міста (поблизу <strong>Ботанічний сад, парк Гагаріна</strong>)",
-						"Власна ТП потужністю <strong>1000 кВт</strong>",
-						"Територія охороняється <strong>цілодобово</strong>"
-					],
-					"cta": "Стати резидентом: 067 719 09 00"
-				}
-			]
-		},
-		{
-			"id": 5,
-			"slug": "5",
-			"label": "5 рівень",
-			"title": "5 рівень",
-			"image": "/lvl5.webp",
-			"cards": [
-				{
-					"slides": [
-						"/f51.webp",
-						"/f52.webp",
-						"/f53.webp",
-						"/f54.webp",
-						"/f55.webp",
-						"/lvl5.webp",
-						"/f57.webp",
-						"/f58.webp",
-						"/f59.webp",
-						"/f510.webp"
-					],
-					"infoTitle": "Корпус F рівень 5",
-					"listItems": [
-						"Загальна площа <strong>5 рівня</strong> Корпусу F —  <strong>550 кв.м.</strong>",
-						"Окремі простори складають <strong>96 кв.м</strong>, <strong>153 кв.м</strong> та <strong>350 кв.м</strong>",
-						"Висота стелі <strong>3.5 м</strong>",
-						"Великий простір у <strong>300 кв.м.</strong> має вихід на власну відкриту терасу",
-						"Багато природного світла за рахунок вигідного розташування та суцільного скління по периметру",
-						"Окремий вхід на рівень",
-						"Завершення реконструкції: <strong>травень 2021р</strong>",
-						"Унікальний простір, що дозволяють втілити в життя будь-який формат креативної, творчої, виробничої та комерційної галузі",
-						"Поруч <strong>Арт-кафе Fabrica L</strong> для проведення зустрічей, переговорів, презентацій тощо",
-						"Розташування в зеленій частині міста (поблизу <strong>Ботанічний сад, парк Гагаріна</strong>)",
-						"Власна ТП потужністю <strong>1000 кВт</strong>",
-						"Територія охороняється <strong>цілодобово</strong>"
-					],
-					"cta": "Стати резидентом: 067 719 09 00"
-				}
-			]
-		}
-	]
+  "levels": [
+    {
+      "id": 1,
+      "slug": "1",
+      "label": "1 рівень",
+      "label_en": "Level 1",
+      "title": "1 рівень",
+      "title_en": "Level 1",
+      "image": "/lvl1.webp",
+      "cards": [
+        {
+          "slides": [
+            "/lvl1.webp",
+            "/lvl1-2.webp",
+            "/lvl1-3.webp",
+            "/lvl1-4.webp"
+          ],
+          "infoTitle": "Корпус F рівень 1",
+          "listItems": [
+            "Вільні простори корпусу L виходять на червону лінію",
+            "Панорамні вікна, суцільне скління",
+            "Висота стелі <strong>4.5м</strong>",
+            "Багато природного світла",
+            "Унікальний простір, що дозволяє втілити в життя будь-який формат креативної, творчої, виробничої та комерційної галузі",
+            "Поруч Арт-кафе Fabrica L для проведення зустрічей, переговорів та заходів, а також простір <strong>1500 кв.м.</strong> для проведення маштабних заходів",
+            "Розташування в зеленій частині міста (поблизу Ботанічний сад, парк Гагаріна)",
+            "Власна ТП потужністю <strong>1000 кВт</strong>",
+            "Територія охороняється цілодобово"
+          ],
+          "cta": "Стати резидентом: 067 719 09 00",
+          "infoTitle_en": "Building F level 1",
+          "listItems_en": [
+            "The free spaces of the L building overlook the red line",
+            "Panoramic windows, solid glazing",
+            "Ceiling height 4.5m",
+            "Lots of natural light",
+            "A unique space that allows you to bring to life any format of the creative, creative, manufacturing and commercial industry",
+            "Nearby Art Cafe Fabrica L for meetings, negotiations and events, as well as a space of 1500 sq.m. for large-scale events",
+            "Location in the green part of the city (near the Botanical Garden, Gagarin Park)",
+            "Own TP with a capacity of 1000 kW",
+            "The territory is guarded around the clock"
+          ],
+          "cta_en": "Become a resident: 067 719 09 00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "2",
+      "label": "2 рівень",
+      "label_en": "Level 2",
+      "title": "2 рівень",
+      "title_en": "Level 2",
+      "image": "/lvl2.webp",
+      "cards": [
+        {
+          "slides": [
+            "/f21.webp",
+            "/f22.webp",
+            "/f23.webp",
+            "/f24.webp",
+            "/f25.webp",
+            "/f26.webp",
+            "/f27.webp"
+          ],
+          "infoTitle": "Корпус F рівень 2",
+          "listItems": [
+            "Простір складається із двох кабінетів <strong>100 кв.м</strong> і <strong>30 кв.м</strong>",
+            "Авторський ремонт, опалення, кондиціонування",
+            "Висота стелі <strong>3.5м</strong>",
+            "Поруч арт-кафе для смачних перерв, проведення зустрічей, переговорів та заходів."
+          ],
+          "cta": "Стати резидентом: 067 719 09 00",
+          "infoTitle_en": "Building F level 2",
+          "listItems_en": [
+            "The space consists of two offices of 100 sq.m and 30 sq.m",
+            "Author's repair, heating, air conditioning",
+            "Ceiling height 3.5m",
+            "Near the art cafe for delicious breaks, meetings, negotiations and events."
+          ],
+          "cta_en": "Become a resident: 067 719 09 00"
+        },
+        {
+          "slides": [
+            "/l21.webp",
+            "/l22.webp",
+            "/l23.webp",
+            "/l24.webp",
+            "/l25.webp",
+            "/l26.webp",
+            "/l27.webp",
+            "/l28.webp",
+            "/l29.webp",
+            "/l210.webp",
+            "/l211.webp",
+            "/l212.webp",
+            "/l213.webp",
+            "/l214.webp",
+            "/l215.webp",
+            "/l216.webp",
+            "/l217.webp"
+          ],
+          "infoTitle": "Корпус L рівень 2",
+          "listItems": [
+            "Простір загальною площею <strong>850 кв.м</strong>",
+            "Можливе розмежування навпіл",
+            "Планування open space",
+            "Відкрита тераса",
+            "2 санвузли",
+            "Поруч арт-кафе для смачних перерв,  проведення зустрічей, переговорів та заходів"
+          ],
+          "cta": "Стати резидентом: 067 719 09 00",
+          "infoTitle_en": "Building L level 2",
+          "listItems_en": [
+            "Space with a total area of 850 sq.m.",
+            "Possible delimitation in half",
+            "Open space planning",
+            "Outdoor terrace",
+            "2 bathrooms",
+            "Near the art cafe for delicious breaks,  meetings, negotiations and events"
+          ],
+          "cta_en": "Become a resident: 067 719 09 00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "3",
+      "label": "3 рівень",
+      "label_en": "Level 3",
+      "title": "3 рівень",
+      "title_en": "Level 3",
+      "image": "/lvl3.webp",
+      "cards": [
+        {
+          "slides": [
+            "/f31.webp",
+            "/f32.webp",
+            "/f33.webp"
+          ],
+          "infoTitle": "Корпус F рівень 3",
+          "listItems": [
+            "Простір загальною площею <strong>110 кв.м</strong>",
+            "Висота стелі <strong>3.5 м</strong>",
+            "Для танцювальних та творчих студій, навчальних центрів та гуртків дитячого розвитку",
+            "Панорамні вікна із розкішним краєвидом, що сприяє релаксу та творчому настрою"
+          ],
+          "cta": "Стати резидентом: 067 719 09 00",
+          "infoTitle_en": "Building F level 3",
+          "listItems_en": [
+            "Space with a total area of 110 sq.m.",
+            "Ceiling height 3.5 m",
+            "For dance and creative studios, training centers and child development clubs",
+            "Panoramic windows with a luxurious view that promotes relaxation and creative mood"
+          ],
+          "cta_en": "Become a resident: 067 719 09 00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "4",
+      "label": "4 рівень",
+      "label_en": "Level 4",
+      "title": "4 рівень",
+      "title_en": "Level 4",
+      "image": "/lvl4.webp",
+      "cards": [
+        {
+          "slides": [
+            "/f41.webp",
+            "/f42.webp",
+            "/f43.webp",
+            "/f44.webp",
+            "/f45.webp",
+            "/f46.webp",
+            "/lvl4.webp",
+            "/f48.webp",
+            "/f49.webp",
+            "/f410.webp",
+            "/f411.webp",
+            "/f412.webp"
+          ],
+          "infoTitle": "Корпус F рівень 4",
+          "listItems": [
+            "Простір загальною площею <strong>110 кв.м</strong>",
+            "<strong>Панорамні вікна</strong>, суцільне скління",
+            "Висота стелі <strong>4.5 м</strong>",
+            "Багато природного світла",
+            "Унікальний простір, що дозволяє втілити в життя будь-який формат креативної, творчої, виробничої та комерційної галузі",
+            "Поруч Арт-кафе Fabrica L для проведення зустрічей, переговорів та заходів, а також простір <strong>1500 кв.м.</strong> для проведення маштабних заходів",
+            "Розташування в зеленій частині міста (поблизу <strong>Ботанічний сад, парк Гагаріна</strong>)",
+            "Власна ТП потужністю <strong>1000 кВт</strong>",
+            "Територія охороняється <strong>цілодобово</strong>"
+          ],
+          "cta": "Стати резидентом: 067 719 09 00",
+          "infoTitle_en": "Building F level 4",
+          "listItems_en": [
+            "Space with a total area of 110 sq.m.",
+            "Panoramic windows, solid glazing",
+            "Ceiling height 4.5 m",
+            "Lots of natural light",
+            "A unique space that allows you to bring to life any format of the creative, creative, manufacturing and commercial industry",
+            "Nearby Art Cafe Fabrica L for meetings, negotiations and events, as well as a space of 1500 sq.m. for large-scale events",
+            "Location in the green part of the city (near the Botanical Garden, Gagarin Park)",
+            "Own TP with a capacity of 1000 kW",
+            "The territory is guarded around the clock"
+          ],
+          "cta_en": "Become a resident: 067 719 09 00"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "5",
+      "label": "5 рівень",
+      "label_en": "Level 5",
+      "title": "5 рівень",
+      "title_en": "Level 5",
+      "image": "/lvl5.webp",
+      "cards": [
+        {
+          "slides": [
+            "/f51.webp",
+            "/f52.webp",
+            "/f53.webp",
+            "/f54.webp",
+            "/f55.webp",
+            "/lvl5.webp",
+            "/f57.webp",
+            "/f58.webp",
+            "/f59.webp",
+            "/f510.webp"
+          ],
+          "infoTitle": "Корпус F рівень 5",
+          "listItems": [
+            "Загальна площа <strong>5 рівня</strong> Корпусу F —  <strong>550 кв.м.</strong>",
+            "Окремі простори складають <strong>96 кв.м</strong>, <strong>153 кв.м</strong> та <strong>350 кв.м</strong>",
+            "Висота стелі <strong>3.5 м</strong>",
+            "Великий простір у <strong>300 кв.м.</strong> має вихід на власну відкриту терасу",
+            "Багато природного світла за рахунок вигідного розташування та суцільного скління по периметру",
+            "Окремий вхід на рівень",
+            "Завершення реконструкції: <strong>травень 2021р</strong>",
+            "Унікальний простір, що дозволяють втілити в життя будь-який формат креативної, творчої, виробничої та комерційної галузі",
+            "Поруч <strong>Арт-кафе Fabrica L</strong> для проведення зустрічей, переговорів, презентацій тощо",
+            "Розташування в зеленій частині міста (поблизу <strong>Ботанічний сад, парк Гагаріна</strong>)",
+            "Власна ТП потужністю <strong>1000 кВт</strong>",
+            "Територія охороняється <strong>цілодобово</strong>"
+          ],
+          "cta": "Стати резидентом: 067 719 09 00",
+          "infoTitle_en": "Building F level 5",
+          "listItems_en": [
+            "The total area of the 5th level of Building F is  550 sq.m.",
+            "Separate spaces are 96 sqm, 153 sqm and 350 sqm",
+            "Ceiling height 3.5 m",
+            "A large space of 300 sq.m. has access to its own outdoor terrace",
+            "Lots of natural light due to the advantageous location and solid glazing around the perimeter",
+            "Private Level Entrance",
+            "Completion of reconstruction: May 2021",
+            "A unique space that allows you to bring to life any format of the creative, creative, manufacturing and commercial industry",
+            "Near Fabrica L Art Cafe for meetings, negotiations, presentations, etc.",
+            "Location in the green part of the city (near the Botanical Garden, Gagarin Park)",
+            "Own TP with a capacity of 1000 kW",
+            "The territory is guarded around the clock"
+          ],
+          "cta_en": "Become a resident: 067 719 09 00"
+        }
+      ]
+    }
+  ]
 }

@@ -2,15 +2,18 @@
 
 import { useState, useCallback } from 'react'
 import Lightbox from 'yet-another-react-lightbox'
+import { useLocale } from '@/context/LocaleContext'
 import Counter from 'yet-another-react-lightbox/plugins/counter'
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen'
 import 'yet-another-react-lightbox/styles.css'
 import 'yet-another-react-lightbox/plugins/counter.css'
 
-import { bookingPhone, getBookingTel, halls, locationImages } from '@/data/locations'
+import { bookingPhone, getBookingTel, getHalls, locationImages } from '@/data/locations'
 import './style.css'
 
 const LocationsBlock = () => {
+	const { t, locale } = useLocale()
+	const halls = getHalls(locale)
 	const [lightboxOpen, setLightboxOpen] = useState(false)
 	const [lightboxSlides, setLightboxSlides] = useState<{ src: string; alt?: string }[]>([])
 	const [lightboxIndex, setLightboxIndex] = useState(0)
@@ -19,18 +22,18 @@ const LocationsBlock = () => {
 		setLightboxSlides(
 			sources.map((src, i) => ({
 				src,
-				alt: altPrefix ? `${altPrefix} ${i + 1}` : `Фото ${i + 1}`,
+				alt: altPrefix ? `${altPrefix} ${i + 1}` : `${t('locations.photo')} ${i + 1}`,
 			}))
 		)
 		setLightboxIndex(index)
 		setLightboxOpen(true)
-	}, [])
+	}, [t])
 
 	return (
 		<div id='photos' className='locations-block'>
 			<div className='locations-block-container'>
 				<h1 className='locations-block-title'>
-					Простори для проведення івентів та заходів
+					{t('locations.title')}
 				</h1>
 				<div className='locations-block-list'>
 					{halls.map((hall, hallIndex) => (
@@ -60,13 +63,13 @@ const LocationsBlock = () => {
 								{hall.extraLines?.map((line, i) => (
 									<span key={i}>{line}</span>
 								))}
-								<span>Для проведення:</span>
+								<span>{t('locations.forConducting')}</span>
 								<ul>
 									{hall.forConducting.map((item, i) => (
 										<li key={i}>{item}</li>
 									))}
 								</ul>
-								<span>У вартості оренди враховано:</span>
+								<span>{t('locations.includedInRent')}</span>
 								<ul>
 									{hall.includedInRent.map((item, i) => (
 										<li key={i}>{item}</li>
@@ -75,7 +78,7 @@ const LocationsBlock = () => {
 								</div>
 							</div>
 						<span className='locations-hall-booking'>
-							Бронюйте за телефоном{' '}
+							{t('locations.booking')}{' '}
 							<a href={`tel:${getBookingTel()}`}>
 								{bookingPhone}
 							</a>

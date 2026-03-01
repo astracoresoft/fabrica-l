@@ -4,19 +4,25 @@
       "title": "Instagram",
       "subtitle": "дивіться наші фото",
       "href": "https://www.instagram.com/fabrica.l.dp/",
-      "icon": "instagram"
+      "icon": "instagram",
+      "title_en": "Instagram",
+      "subtitle_en": "see our photos"
     },
     {
       "title": "Facebook",
       "subtitle": "додавайте в друзі",
       "href": "https://www.facebook.com/DniproFabricaL",
-      "icon": "facebook"
+      "icon": "facebook",
+      "title_en": "Facebook",
+      "subtitle_en": "add as a friend"
     },
     {
       "title": "Telegram",
       "subtitle": "отримуйте більше",
       "href": "https://t.me/FabricaL_bot",
-      "icon": "telegram"
+      "icon": "telegram",
+      "title_en": "Telegram",
+      "subtitle_en": "get more"
     }
   ]
 }

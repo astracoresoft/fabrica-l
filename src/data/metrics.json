@@ -1,12 +1,52 @@
 {
   "items": [
-    { "number": 100, "text": "фотоіндустрія", "image": "/metric1.webp" },
-    { "number": 630, "text": "it-компанії", "image": "/metric2.webp" },
-    { "number": 700, "text": "Міжнародна логістика", "image": "/metric3.webp" },
-    { "number": 700, "text": "Регіональні ЗМI", "image": "/metric4.webp" },
-    { "number": 250, "text": "Кав'ярня та коворкінг", "image": "/metric5.webp" },
-    { "number": 1600, "text": "Івент-хол", "image": "/metric6.webp" },
-    { "number": 570, "text": "Креативні майстерні", "image": "/metric7.webp" },
-    { "number": 1750, "text": "Виставкові простори", "image": "/metric8.webp" }
+    {
+      "number": 100,
+      "text": "фотоіндустрія",
+      "image": "/metric1.webp",
+      "text_en": "photo industry"
+    },
+    {
+      "number": 630,
+      "text": "it-компанії",
+      "image": "/metric2.webp",
+      "text_en": "it-companies"
+    },
+    {
+      "number": 700,
+      "text": "Міжнародна логістика",
+      "image": "/metric3.webp",
+      "text_en": "International Logistics"
+    },
+    {
+      "number": 700,
+      "text": "Регіональні ЗМI",
+      "image": "/metric4.webp",
+      "text_en": "Regional media"
+    },
+    {
+      "number": 250,
+      "text": "Кав'ярня та коворкінг",
+      "image": "/metric5.webp",
+      "text_en": "Coffee Shop & Coworking Space"
+    },
+    {
+      "number": 1600,
+      "text": "Івент-хол",
+      "image": "/metric6.webp",
+      "text_en": "Event Hall"
+    },
+    {
+      "number": 570,
+      "text": "Креативні майстерні",
+      "image": "/metric7.webp",
+      "text_en": "Creative workshops"
+    },
+    {
+      "number": 1750,
+      "text": "Виставкові простори",
+      "image": "/metric8.webp",
+      "text_en": "Exhibition spaces"
+    }
   ]
 }

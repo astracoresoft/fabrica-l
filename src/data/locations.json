@@ -3,46 +3,140 @@
   "halls": [
     {
       "title": "Івент-хол Small",
-      "images": ["/holl-small1.webp", "/holl-small2.webp", "/holl-small3.webp", "/holl-small4.webp"],
+      "images": [
+        "/holl-small1.webp",
+        "/holl-small2.webp",
+        "/holl-small3.webp",
+        "/holl-small4.webp"
+      ],
       "area": "Загальна площа 100 кв.м",
       "capacity": "Місткість до 80 посадкових місць",
-      "forConducting": ["Конференцій", "Тренінгів", "Виставок", "Показів", "Лекцій", "Індивідуальних свят"],
+      "forConducting": [
+        "Конференцій",
+        "Тренінгів",
+        "Виставок",
+        "Показів",
+        "Лекцій",
+        "Індивідуальних свят"
+      ],
       "includedInRent": [
         "Стільці, дивани, столи (кількість обговорюється індивідуально)",
         "Комплект музичної апаратури для супроводу: колонки, мікшер, мікрофон",
         "Проектор з екраном",
         "Фліпчарт",
         "Wi-fi"
+      ],
+      "title_en": "Small Event Hall",
+      "area_en": "Total area, sq.m.",
+      "capacity_en": "Capacity up to 80 seats",
+      "forConducting_en": [
+        "Conferences",
+        "Trainings",
+        "Exhibitions",
+        "Shown",
+        "Lectures",
+        "Individual holidays"
+      ],
+      "includedInRent_en": [
+        "Chairs, sofas, tables (number to be discussed individually)",
+        "Set of musical equipment for accompaniment: speakers, mixer, microphone",
+        "Projector with screen",
+        "Flipchart",
+        "Wi-Fi"
       ]
     },
     {
       "title": "Івент-хол Medium",
-      "images": ["/holl-medium1.webp", "/holl-medium2.webp", "/holl-medium3.webp", "/holl-medium4.webp"],
+      "images": [
+        "/holl-medium1.webp",
+        "/holl-medium2.webp",
+        "/holl-medium3.webp",
+        "/holl-medium4.webp"
+      ],
       "area": "Загальна площа 350 кв.м",
       "capacity": "Місткість до 200 посадкових місць",
-      "extraLines": ["Відкрита тераса"],
-      "forConducting": ["Конференцій", "Тренінгів", "Виставок", "Показів", "Лекцій", "Індивідуальних свят"],
+      "extraLines": [
+        "Відкрита тераса"
+      ],
+      "forConducting": [
+        "Конференцій",
+        "Тренінгів",
+        "Виставок",
+        "Показів",
+        "Лекцій",
+        "Індивідуальних свят"
+      ],
       "includedInRent": [
         "Стільці, дивани, столи (кількість обговорюється індивідуально)",
         "Комплект музичної апаратури для супроводу: колонки, мікшер, мікрофон",
         "Проектор з екраном",
         "Фліпчарт",
         "Wi-fi"
+      ],
+      "title_en": "Medium Event Hall",
+      "area_en": "Total area, sq.m.",
+      "capacity_en": "Capacity up to 200 seats",
+      "extraLines_en": [
+        "Outdoor terrace"
+      ],
+      "forConducting_en": [
+        "Conferences",
+        "Trainings",
+        "Exhibitions",
+        "Shown",
+        "Lectures",
+        "Individual holidays"
+      ],
+      "includedInRent_en": [
+        "Chairs, sofas, tables (number to be discussed individually)",
+        "Set of musical equipment for accompaniment: speakers, mixer, microphone",
+        "Projector with screen",
+        "Flipchart",
+        "Wi-Fi"
       ]
     },
     {
       "title": "Івент-хол Large",
-      "images": ["/holl-large1.webp", "/holl-large2.webp", "/holl-large3.webp", "/holl-large4.webp"],
+      "images": [
+        "/holl-large1.webp",
+        "/holl-large2.webp",
+        "/holl-large3.webp",
+        "/holl-large4.webp"
+      ],
       "area": "Загальна площа 850 кв.м",
       "capacity": "Місткість до 400+ посадкових місць",
-      "extraLines": ["Відкрита тераса"],
-      "forConducting": ["Фестивалів", "Виставок", "Індивідуальних свят"],
+      "extraLines": [
+        "Відкрита тераса"
+      ],
+      "forConducting": [
+        "Фестивалів",
+        "Виставок",
+        "Індивідуальних свят"
+      ],
       "includedInRent": [
         "Стільці, дивани, столи (кількість обговорюється індивідуально)",
         "Комплект музичної апаратури для супроводу: колонки, мікшер, мікрофон",
         "Проектор з екраном",
         "Фліпчарт",
         "Wi-fi"
+      ],
+      "title_en": "Large Event Hall",
+      "area_en": "Total area, sq.m.",
+      "capacity_en": "Capacity up to 400+ seats",
+      "extraLines_en": [
+        "Outdoor terrace"
+      ],
+      "forConducting_en": [
+        "festivals",
+        "Exhibitions",
+        "Individual holidays"
+      ],
+      "includedInRent_en": [
+        "Chairs, sofas, tables (number to be discussed individually)",
+        "Set of musical equipment for accompaniment: speakers, mixer, microphone",
+        "Projector with screen",
+        "Flipchart",
+        "Wi-Fi"
       ]
     }
   ],

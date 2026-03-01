@@ -1,15 +1,18 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { FiX } from 'react-icons/fi'
 
-import { NAV_ITEMS } from '@/data/nav'
+import { useLocale } from '@/context/LocaleContext'
+import { getNavItems } from '@/data/nav'
 import './style.css'
 
 export default function Header() {
 	const pathname = usePathname()
+	const { t, locale } = useLocale()
+	const navItems = useMemo(() => getNavItems(locale, t), [locale, t])
 	const [visible, setVisible] = useState(false)
 	const [menuOpen, setMenuOpen] = useState(false)
 
@@ -50,7 +53,7 @@ export default function Header() {
 
 					<nav className='desktop-nav'>
 						<ul className='nav-menu'>
-							{NAV_ITEMS.flatMap((item, i) => [
+							{navItems.flatMap((item, i) => [
 								<li
 									key={item.href}
 									className={item.children ? 'nav-item nav-item--dropdown' : 'nav-item'}
@@ -81,8 +84,8 @@ export default function Header() {
 										</div>
 									)}
 								</li>,
-								...(i < NAV_ITEMS.length - 1
-									? [<li key={`sep-${i}`} className='nav-sep' aria-hidden />]
+								...(i < navItems.length - 1
+									? [<li key={`sep-${i}`} className="nav-sep" aria-hidden />]
 									: []),
 							])}
 						</ul>
@@ -92,7 +95,7 @@ export default function Header() {
 						type='button'
 						className='burger'
 						onClick={() => setMenuOpen(true)}
-						aria-label='Открыть меню'
+						aria-label={t('header.openMenu')}
 					>
 						<img src='/burger-menu.webp' alt='' />
 					</button>
@@ -110,13 +113,13 @@ export default function Header() {
 					type='button'
 					className='sidebar-close'
 					onClick={closeMenu}
-					aria-label='Закрыть меню'
+					aria-label={t('header.closeMenu')}
 				>
 					<FiX size={28} />
 				</button>
 				<nav>
 					<ul className='sidebar-menu'>
-						{NAV_ITEMS.map((item) => (
+						{navItems.map((item) => (
 							<li key={item.href}>
 								{item.href.startsWith('#') ? (
 									isHome ? (

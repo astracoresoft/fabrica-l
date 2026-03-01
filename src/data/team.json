@@ -3,47 +3,65 @@
     {
       "name": "Юрiй Симонов",
       "image": "/team1.webp",
-      "description": "інiцiатор проекта. Засновник ГО \"Команда Днiпра\", Голова ГО \"Европейське поколiння\". Ідейний натхненник і меценат багатьох проектів, які роблять наше життя гідним міста Дніпро. Людина, яка увійде в історію нашого мiста!"
+      "description": "інiцiатор проекта. Засновник ГО \"Команда Днiпра\", Голова ГО \"Европейське поколiння\". Ідейний натхненник і меценат багатьох проектів, які роблять наше життя гідним міста Дніпро. Людина, яка увійде в історію нашого мiста!",
+      "name_en": "Yuri Simonov",
+      "description_en": "project initiator. Founder of the NGO \"Dnipro Team\", Head of the NGO \"European Generation\". The ideological inspirer and patron of many projects that make our lives worthy of the city of Dnipro. A man who will go down in the history of our city!"
     },
     {
       "name": "Павліна Недзвецька",
       "image": "/team2.webp",
-      "description": "Спонсор проекту. Лідер у сфері розвитку талантів та управління командами. Має 10-ти річний досвід управління бізнесами. Втілює в життя найамбітніші комунікаційні виклики проектів"
+      "description": "Спонсор проекту. Лідер у сфері розвитку талантів та управління командами. Має 10-ти річний досвід управління бізнесами. Втілює в життя найамбітніші комунікаційні виклики проектів",
+      "name_en": "Pavlina Nedzvetska",
+      "description_en": "Project Sponsor: Leader in talent development and team management. He has 10 years of business management experience. Realizes the most ambitious communication challenges of projects"
     },
     {
       "name": "Роман Лапко",
       "image": "/team3.webp",
-      "description": "Архітектор проекта. Найсміливіший в місті керiвник проектів з реконструкції будівель та споруд. Відкритість, наполегливість та відповідальність - основні якісті Романа, які з легкістю реалізують всі можливі та неможливі завдання проекта"
+      "description": "Архітектор проекта. Найсміливіший в місті керiвник проектів з реконструкції будівель та споруд. Відкритість, наполегливість та відповідальність - основні якісті Романа, які з легкістю реалізують всі можливі та неможливі завдання проекта",
+      "name_en": "Roman Lapko",
+      "description_en": "Project architect. The most courageous project manager in the city for the reconstruction of buildings and structures. Openness, perseverance and responsibility are the main qualities of Roman, which easily implement all possible and impossible tasks of the project"
     },
     {
       "name": "Галина Недзвецька",
       "image": "/team4.webp",
-      "description": "Керівник проекту. 10-ти річний досвід успішного управління проектами від впровадження системи обліку до реконструкції історичних пам'яток архітектури. Досвід нашого керівника - це гарантія втілення основної ідеї проекту"
+      "description": "Керівник проекту. 10-ти річний досвід успішного управління проектами від впровадження системи обліку до реконструкції історичних пам'яток архітектури. Досвід нашого керівника - це гарантія втілення основної ідеї проекту",
+      "name_en": "Halyna Nedzvetska",
+      "description_en": "Project Manager. 10 years of successful project management experience from the implementation of the accounting system to the reconstruction of historical monuments of architecture. The experience of our manager is a guarantee of the implementation of the main idea of the project"
     },
     {
       "name": "Дмитро Деменський",
       "image": "/team5.webp",
-      "description": "Співавтор концепції Fabrica L"
+      "description": "Співавтор концепції Fabrica L",
+      "name_en": "Dmytro Demenskyi",
+      "description_en": "Co-author of the Fabrica L concept"
     },
     {
       "name": "Ілля Сухіна",
       "image": "/team6.webp",
-      "description": "Координатор зв'язків з партнерами. Енергійний та ефективний, Ілля робить можливою співпрацю десятків організацій та спеціалістів заради спільної мети"
+      "description": "Координатор зв'язків з партнерами. Енергійний та ефективний, Ілля робить можливою співпрацю десятків організацій та спеціалістів заради спільної мети",
+      "name_en": "Ilya Sukhina",
+      "description_en": "Partner Liaison Coordinator. Energetic and effective, Ilya makes possible the cooperation of dozens of organizations and specialists for the sake of a common goal"
     },
     {
       "name": "Ольга Макаренко",
       "image": "/team7.webp",
-      "description": "Керуюча Fabrica L. Дуже віддана та любляча Fabrica L людина Всі процеси тут знаходяться під її чуйним контролем"
+      "description": "Керуюча Fabrica L. Дуже віддана та любляча Fabrica L людина Всі процеси тут знаходяться під її чуйним контролем",
+      "name_en": "Olga Makarenko",
+      "description_en": "Managing Fabrica L. A very dedicated and loving Fabrica L person All processes here are under her sensitive control"
     },
     {
       "name": "Катерина Танченко",
       "image": "/team8.webp",
-      "description": "Головний бухгалтер. Точність, відповідальність та суттєвий досвід в роботі з різними підприємствами гарантують якісний контроль та прозору роботу проекту"
+      "description": "Головний бухгалтер. Точність, відповідальність та суттєвий досвід в роботі з різними підприємствами гарантують якісний контроль та прозору роботу проекту",
+      "name_en": "Kateryna Tanchenko",
+      "description_en": "Chief Accountant. Accuracy, responsibility and significant experience in working with various enterprises guarantee quality control and transparent work of the project"
     },
     {
       "name": "Лоліта",
       "image": "/team9.webp",
-      "description": "Івент-менеджер Fabrica L. Відкрита, позитивна, гостинна - Саме вона наповнює життя подіями на Fabrica L"
+      "description": "Івент-менеджер Fabrica L. Відкрита, позитивна, гостинна - Саме вона наповнює життя подіями на Fabrica L",
+      "name_en": "Lolita",
+      "description_en": "Event manager of Fabrica L. Open, positive, hospitable - it is she who fills life with events at Fabrica L."
     }
   ]
 }

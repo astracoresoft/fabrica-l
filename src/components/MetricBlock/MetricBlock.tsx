@@ -2,11 +2,13 @@
 
 import { useState, useEffect, useRef } from 'react'
 
+import { useLocale } from '@/context/LocaleContext'
 import { getMetrics } from '@/data/metrics'
 import './style.css'
 
 const MetricBlock = () => {
-	const METRICS = getMetrics()
+	const { locale } = useLocale()
+	const METRICS = getMetrics(locale)
 	const [displayedNumbers, setDisplayedNumbers] = useState<number[]>(
 		METRICS.map(() => 0)
 	)

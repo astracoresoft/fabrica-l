@@ -1,9 +1,1 @@
-{
-  "items": [
-    { "href": "#about", "label": "про проект" },
-    { "href": "#photos", "label": "фото" },
-    { "href": "/rents", "label": "резидентство", "withChildren": true },
-    { "href": "#team", "label": "команда" },
-    { "href": "#contacts", "label": "контакти" }
-  ]
-}
+{"items":[{"href":"#about","labelKey":"nav.about"},{"href":"#photos","labelKey":"nav.photos"},{"href":"/rents","labelKey":"nav.rents","withChildren":true},{"href":"#team","labelKey":"nav.team"},{"href":"#contacts","labelKey":"nav.contacts"}]}

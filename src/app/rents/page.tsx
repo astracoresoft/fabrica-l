@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { cookies } from 'next/headers'
 import { ChevronsRight } from 'lucide-react'
 
+import { LOCALE_COOKIE_NAME } from '@/lib/locale'
+import { getServerT } from '@/lib/i18n-server'
 import { getLevels } from '@/data/levels'
 import { SITE_URL } from '@/config/site'
 import './style.css'
-
-const LEVELS = getLevels()
 
 export const metadata: Metadata = {
 	title: 'Оренда — Резидентство',
@@ -23,12 +24,17 @@ export const metadata: Metadata = {
 	},
 }
 
-export default function RentsPage() {
+export default async function RentsPage() {
+	const cookieStore = await cookies()
+	const locale = cookieStore.get(LOCALE_COOKIE_NAME)?.value === 'en' ? 'en' : 'ua'
+	const t = getServerT(locale)
+	const LEVELS = getLevels(locale)
+
 	return (
 		<div className='rents-page'>
 			<div className='rents-page-container'>
 				<div className='rents-page-title-wrap'>
-					<h1 className='rents-page-title'>Оренда</h1>
+					<h1 className='rents-page-title'>{t('rents.title')}</h1>
 				</div>
 				<div className='level-cards'>
 					{LEVELS.map((level) => (
@@ -36,7 +42,7 @@ export default function RentsPage() {
 							<h2 className='level-title'>{level.label}</h2>
 							<Link href={`/rents/${level.slug}`} className='level-cta'>
 								<ChevronsRight size={18} strokeWidth={2} aria-hidden />
-								переглянути {level.label}
+								{t('rents.viewLevel')} {level.label}
 							</Link>
 							<img src={level.image} alt={level.label} className='level-image' />
 							<div className='level-divider' />

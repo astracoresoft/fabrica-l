@@ -1,9 +1,12 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+
+import { useLocale } from '@/context/LocaleContext'
 import './style.css'
 
 const GetStartedBlock = () => {
+	const { t } = useLocale()
 	const [runAnimation, setRunAnimation] = useState(false)
 	const ref = useRef<HTMLDivElement>(null)
 
@@ -29,14 +32,14 @@ const GetStartedBlock = () => {
 						className={`get-started-block-text-wrap${runAnimation ? ' get-started-block-text-wrap--in-view' : ''}`}
 					>
 						<div className='get-started-block-overlay' aria-hidden />
-						<p>Добробут міст збільшується,</p>
+						<p>{t('getStarted.line1')},</p>
 						<br />
 						<p className='get-started-block-highlight'>
-							коли зростає покоління культурних і креативних людей
+							{t('getStarted.line2')}
 						</p>
 					</div>
 					<button type='button' className='get-started-block-cta'>
-						стати резидентом
+						{t('getStarted.cta')}
 					</button>
 				</div>
 			</div>

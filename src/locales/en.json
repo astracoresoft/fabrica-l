@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "about": "About the project",
+    "photos": "photo",
+    "rents": "residency",
+    "team": "team",
+    "contacts": "Contact Us"
+  },
+  "header": {
+    "openMenu": "open menu",
+    "closeMenu": "Close menu"
+  },
+  "about": {
+    "title": "About the project",
+    "intro": "Fabrica L is a creative hub for business and events.\n\nBy bringing together representatives of the creative industries, we create a new creative community in Dnipro.\n\nWe revitalize the former Hats Factory in Dnipro and give this building a new function, preserving the industrial aesthetics.\n\nOn an area of more than 11 thousand square meters, we create conditions for commercial and social initiatives aimed at the development of the new economy, modern art, non-formal education, etc.\n\nFabrica L is the largest such center in the Dnipro region.",
+    "card1Title": "Be part of the change",
+    "card1Desc": "Fabrica L is a reboot idea, a place for people to self-actualize and a reason to stay in the city.",
+    "card2Title": "Find like-minded people",
+    "card2Desc": "The project brings together a community of people with similar values, stimulates to find solutions to problems together, provides access to talents and unique expertise.",
+    "ctaRent": "Rental of premises"
+  },
+  "team": {
+    "title": "OUR TEAM"
+  },
+  "contacts": {
+    "title": "contact us"
+  },
+  "locations": {
+    "title": "Spaces for events and activities",
+    "forConducting": "FOR CONDUCTING",
+    "includedInRent": "The rental price includes:",
+    "booking": "Book by phone",
+    "photo": "Photo"
+  },
+  "getStarted": {
+    "line1": "The welfare of cities is increasing,",
+    "line2": "as a generation of cultured and creative people grows",
+    "cta": "become a resident"
+  },
+  "rents": {
+    "title": "Lease",
+    "viewLevel": "view"
+  },
+  "sideIcons": {
+    "contacts": "Contacts",
+    "hide": "Hide contacts",
+    "show": "Show contacts",
+    "call": "Call me"
+  },
+  "video": {
+    "text": "The well-being of cities grows when a generation\nof cultural and creative people grows",
+    "scrollDown": "Scroll down"
+  }
+}

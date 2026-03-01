@@ -11,7 +11,6 @@ const RIGHT_OFFSET = 40
 const AUTO_PLAY_MS = 3000
 
 const SLIDES = getSlides()
-// Два полных повтора — в конце анимации показываем второй набор, визуально тот же что и первый
 const SLIDES_EXTENDED = [...SLIDES, ...SLIDES]
 
 function getSlidesToShow(containerWidth: number): number {
@@ -62,22 +61,24 @@ export default function SliderBlock() {
 	if (SLIDES.length === 0) return null
 
 	// Округляем до целого, чтобы в точке зацикливания не было субпиксельного сдвига
-	const cycleWidthPx = Math.round(SLIDES.length * SLIDE_WIDTH + (SLIDES.length - 1) * gap)
+	const cycleWidthPx = Math.round(
+		SLIDES.length * SLIDE_WIDTH + (SLIDES.length - 1) * gap,
+	)
 	const durationMs = SLIDES.length * AUTO_PLAY_MS
 	const isSingleSlide = slidesToShow === 1
 
 	return (
-		<div className="slider-block">
-			<div className="slider-block-container" ref={containerRef}>
+		<div className='slider-block'>
+			<div className='slider-block-container' ref={containerRef}>
 				<div
-					className="slider-track-wrapper"
+					className='slider-track-wrapper'
 					style={{
 						width: isSingleSlide ? SLIDE_WIDTH : '100%',
 						justifyContent: isSingleSlide ? 'center' : undefined,
 					}}
 				>
 					<div
-						className="slider-track"
+						className='slider-track'
 						style={{
 							gap,
 							width: isSingleSlide ? SLIDE_WIDTH : undefined,
@@ -88,14 +89,14 @@ export default function SliderBlock() {
 						{SLIDES_EXTENDED.map((src, i) => (
 							<div
 								key={`${i}-${src}`}
-								className="slider-slide"
+								className='slider-slide'
 								style={{
 									flex: isSingleSlide ? 'none' : `0 0 ${SLIDE_WIDTH}px`,
 									width: SLIDE_WIDTH,
 									minWidth: SLIDE_WIDTH,
 								}}
 							>
-								<img src={src} alt="" />
+								<img src={src} alt='' />
 							</div>
 						))}
 					</div>

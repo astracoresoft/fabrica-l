@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { cookies } from 'next/headers'
 
+import { LOCALE_COOKIE_NAME } from '@/lib/locale'
 import { getLevelBySlug, getLevels } from '@/data/levels'
 import { SITE_URL } from '@/config/site'
 import LevelSliderWithGallery from './LevelSliderWithGallery'
@@ -14,7 +16,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { level } = await params
-	const levelData = getLevelBySlug(level)
+	const cookieStore = await cookies()
+	const locale = cookieStore.get(LOCALE_COOKIE_NAME)?.value === 'en' ? 'en' : 'ua'
+	const levelData = getLevelBySlug(level, locale)
 	if (!levelData) return {}
 	const url = `${SITE_URL}/rents/${levelData.slug}`
 	return {
@@ -33,7 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function RentsLevelPage({ params }: Props) {
 	const { level } = await params
-	const levelData = getLevelBySlug(level)
+	const cookieStore = await cookies()
+	const locale = cookieStore.get(LOCALE_COOKIE_NAME)?.value === 'en' ? 'en' : 'ua'
+	const levelData = getLevelBySlug(level, locale)
 	if (!levelData) notFound()
 
 	return (

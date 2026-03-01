@@ -1,5 +1,6 @@
 import navData from './nav.json'
-import { RENTS_NAV_ITEMS } from './levels'
+import type { Locale } from './levels'
+import { getRentsNavItems } from './levels'
 
 export type NavItem = {
 	href: string
@@ -7,15 +8,19 @@ export type NavItem = {
 	children?: readonly { href: string; label: string }[]
 }
 
-const rawItems = navData.items as { href: string; label: string; withChildren?: boolean }[]
-
-export function getNavItems(): NavItem[] {
-	return rawItems.map((item) => {
-		if (item.withChildren && item.href === '/rents') {
-			return { href: item.href, label: item.label, children: RENTS_NAV_ITEMS }
-		}
-		return { href: item.href, label: item.label }
-	})
+export type NavConfigItem = {
+	href: string
+	labelKey: string
+	withChildren?: boolean
 }
 
-export const NAV_ITEMS = getNavItems()
+const rawItems = navData.items as { href: string; labelKey: string; withChildren?: boolean }[]
+
+export function getNavItems(locale: Locale, t: (key: string) => string): NavItem[] {
+	return rawItems.map((item) => {
+		if (item.withChildren && item.href === '/rents') {
+			return { href: item.href, label: t(item.labelKey), children: getRentsNavItems(locale) }
+		}
+		return { href: item.href, label: t(item.labelKey) }
+	})
+}

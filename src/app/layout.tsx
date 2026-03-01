@@ -1,10 +1,14 @@
 import './globals.css'
 import type { Metadata, Viewport } from 'next'
+import { cookies } from 'next/headers'
 import { Comfortaa, Montserrat_Alternates } from 'next/font/google'
 
+import { LOCALE_COOKIE_NAME } from '@/lib/locale'
 import { SITE_NAME, SITE_URL, SITE_DEFAULT_DESCRIPTION } from '@/config/site'
+import { LocaleProvider } from '@/context/LocaleContext'
 import Header from '@/layout/Header'
 import HashScroll from '@/layout/HashScroll'
+import LanguageSwitcher from '@/layout/LanguageSwitcher'
 import PageSplash from '@/layout/PageSplash'
 import SideIcons from '@/layout/SideIcons'
 import JsonLd from '@/layout/JsonLd'
@@ -89,23 +93,30 @@ export const metadata: Metadata = {
 	},
 }
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode
 }>) {
+	const cookieStore = await cookies()
+	const locale = cookieStore.get(LOCALE_COOKIE_NAME)?.value === 'en' ? 'en' : 'ua'
+	const htmlLang = locale === 'ua' ? 'uk' : 'en'
+
 	return (
-		<html lang='ru' className={`${montserratAlternates.variable} ${comfortaa.variable}`}>
+		<html lang={htmlLang} className={`${montserratAlternates.variable} ${comfortaa.variable}`}>
 			<head>
 				<link rel='icon' href='/favicon.ico' />
 			</head>
 			<body className={montserratAlternates.className}>
-				<JsonLd />
-				<PageSplash />
-				<Header />
-				<HashScroll />
-				<SideIcons />
-				<main id="main-content">{children}</main>
+				<LocaleProvider>
+					<JsonLd />
+					<PageSplash />
+					<Header />
+					<HashScroll />
+					<SideIcons />
+					<main id="main-content">{children}</main>
+					<LanguageSwitcher />
+				</LocaleProvider>
 			</body>
 		</html>
 	)
